@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frustration.</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button id="hof" class="waves-effect waves-light btn" type="button"><i class="material-icons">stars</i> Hall of
+            Fame</button>
+        <nav class="hide">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo logo center">Frustration.</a>
+                <a href="#" id="back" class="left hide-on-small-only" >< Go back</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- div for landing page -->
+        <div id="landing">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Frustration.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>Frustration. The memory game that will leave you in Frustration. in a race against the clock! Pick your topic and the level of difficulty, and try to find all the matching cards. The faster you are, the bigger the time bonus that will be added to your score. But be careful, for each mismatch you get, you will lose a point! Get playing and beat the Frustration.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 m5 l4 offset-m1 offset-l2">
+                    <select id="topic" name="topic">
+                        <option value="" selected disabled>topic</option>
+                        <option value="landscapes">Landscapes</option>
+                        <option value="dogs">Dogs</option>
+                        <option value="cats">Cats</option>
+                    </select>
+                    <label for="topic">Choose a topic:</label>
+                </div>
+                <div class="input-field col s6 m5 l4">
+                    <select id="difficulty" name="difficulty">
+                        <option value="" selected disabled>difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <label for="difficulty">Choose a level:</label>
+                </div>
+            </div>
+            <button id="start" class="waves-effect waves-light btn" type="button">Start</button>
+        </div>
+
+        <!-- div for end -->
+        <div id="end" class="hide">
+            <h1 id="endMessage"></h1>
+            <h3>Your final score is: <span id="finalScore"></span></h3>
+            <div class="row">
+                <div id="nameContainer" class="input-field col s10 m8 l6 offset-s1 offset-m1 offset-l2">
+                    <input placeholder="Name" id="name" type="text">
+                    <label for="name">Enter your name for the leaderboard:</label>
+                </div>
+                <div class="col s12 m1 l2 submitCol">
+                    <button id="submit" class="waves-effect waves-light btn" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- div for leaderboard -->
+        <div id="leaderboard" class="hide">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Hall of Fame</h1>
+                </div>
+            </div>
+            <div class="row" id="lbOptionsRow">
+                <div class="col col s6 m4 l3 offset-s6 offset-m8 offset-l9">
+                    <select name="lbOptions" id="lbOptions">
+                        <option value="" disabled selected>Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <table class="centered">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardRows"></tbody>
+                </table>
+            </div>
+            <button id="home" class="waves-effect waves-light btn" type="button">Home</button>
+        </div>
+    </div>
+
+    <!-- div for game -->
+    <div id="game" class="gameContainer hide">
+        <div id="overlay" class="valign-wrapper">
+            <h3><span class="logo">Frustration.</span> will start in... <span id="countdown"></span></h3>
+        </div>
+        <div class="row">
+            <!-- timer displays on the side on >= large screens and on top on less-->
+            <div class="col s12 l2 scoreTimer">
+                <h3 id="scoreHolder">Score: <span id="score"></span></h3>
+                <h3 id="time"><i class="medium material-icons">timer</i>: <span id="timer"></span></h3>
+            </div>
+            <!-- holds all the cards -->
+            <div id="cardsContainer" class="col s12 l10"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

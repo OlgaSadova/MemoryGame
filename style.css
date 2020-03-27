@@ -1,0 +1,247 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: linear-gradient(to bottom right, seagreen, rgb(30, 238, 238), rgb(255, 251, 0));
+    background-size: 400% 400%;
+    animation: change 10s linear infinite;
+}
+
+@keyframes change {
+    0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}  
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header {
+    text-align: left;
+}
+
+nav {
+    text-align: center;
+    background-color: rgba(46, 139, 86, 0.2);
+    color: white;
+    padding: 0 10px;
+}
+
+table {
+    background-color: rgba(46, 139, 86, 0.4);
+}
+
+td,th {
+    padding: 3px;
+    width: 33.3%;
+}
+
+.container, .gameContainer {
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.logo {
+    font-size: 36px;
+}
+
+.logo, #landing h1 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.logo:hover, #back:hover {
+    color: rgb(212, 212, 212);
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+.input-field > label {
+    color: white;
+    font-weight: bold;
+}
+
+.scoreTimer {
+    margin-top: 15%;
+}
+
+.cardRow {
+    padding-right: 10px;
+}
+
+.cardRow .col {
+    padding: 3px;
+    margin: 0;
+}
+
+.cardRow .col .card{
+    margin: 0;
+    cursor: pointer;
+}
+
+.fourByThree {
+    width: 25%;
+}
+
+.fiveByFour img, .fourByThree img {
+    height: 200px;
+}
+
+.fiveByFour {
+    width: 20%;
+}
+
+.sixByFive {
+    width: 16.6%;
+}
+
+.sixByFive img {
+    height: 160px;
+}
+
+.submitCol {
+    margin-top: 30px;
+}
+
+#hofLink {
+    text-align: start;
+}
+
+#landing, #end, #leaderboard {
+    border: white solid 5px;
+    padding: 50px;
+    margin-top: 50px;
+    color: white;
+}
+
+#landing p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#back {
+    text-align: left;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.637);
+    z-index: 2;
+}
+
+#overlay h3 {
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#scoreHolder {
+    margin-top: 15px;
+}
+
+#time {
+    margin-left: auto;
+}
+
+#time i {
+    font-size: 30px;
+}
+
+#cardsContainer {
+    margin-top: 20px;
+}
+
+#endMessage {
+    margin-bottom: 25px;
+}
+
+#end .row {
+    margin-top: 35px;
+}
+
+#nameContainer {
+    margin-top: 10px;
+}
+
+#home {
+    margin-top: 20px;
+}
+
+#leaderboard h1 {
+    margin-bottom: 15px;
+}
+
+#lbOptionsRow {
+    margin-bottom: 15px;
+}
+
+/* just below large - mobile + tablet devices  */
+@media screen and (max-width: 992px) {
+    .scoreTimer {
+        display: flex;
+        margin-top: 0px;
+    }
+    
+    .cardRow {
+        padding-left: 10px;
+    }
+
+    .fourByThree img, .fiveByFour img {
+        height: 150px;
+    }
+
+    .sixByFive img {
+        height: 120px;
+    }
+
+    #cardsContainer {
+        margin-top: 0;
+    }
+
+}
+
+/* small - mobile devices */
+@media screen and (max-width: 600px) { 
+    .fourByThree img, .fiveByFour img {
+        height: 80px;
+    }
+
+    .sixByFive img {
+        height: 50px;
+    }
+
+    .submitCol {
+        margin-top: 0px;
+    }
+
+    #landing, #end, #leaderboard {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}
